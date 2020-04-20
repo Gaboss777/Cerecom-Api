@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Bytheway001/PHP-Router.git",
-                "reference": "295587798c1409cefe9f4f9a54ef679456bfb73a"
+                "reference": "aa2c6845e0ea555c26d2db5c65953adf58f5e2d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Bytheway001/PHP-Router/zipball/295587798c1409cefe9f4f9a54ef679456bfb73a",
-                "reference": "295587798c1409cefe9f4f9a54ef679456bfb73a",
+                "url": "https://api.github.com/repos/Bytheway001/PHP-Router/zipball/aa2c6845e0ea555c26d2db5c65953adf58f5e2d7",
+                "reference": "aa2c6845e0ea555c26d2db5c65953adf58f5e2d7",
                 "shasum": ""
             },
             "require": {
@@ -59,7 +59,7 @@
             "support": {
                 "source": "https://github.com/Bytheway001/PHP-Router/tree/master"
             },
-            "time": "2020-04-20T17:49:31+00:00"
+            "time": "2020-04-20T17:59:25+00:00"
         },
         {
             "name": "fig/http-message-util",

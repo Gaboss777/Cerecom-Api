@@ -1,4 +1,3 @@
 <div class="container">
-	<h1>Pagina Principal</h1>
-	
+	<h1>Welcome to MFW</h1>
 </div>
