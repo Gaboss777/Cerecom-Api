@@ -2,7 +2,7 @@
     "minimum-stability": "dev",
     "require": {
         "php-activerecord/php-activerecord": "^1.2",
-        "dannyvankooten/php-router":"dev-master",
+        "dannyvankooten/php-router":"master",
         "symfony/yaml": "^3.4",
         "plasticbrain/php-flash-messages": "^1.0",
         "mikehaertl/phpwkhtmltopdf": "^2.2",
@@ -16,8 +16,8 @@
     },
     "repositories": [
         {
-            "type": "git",
-            "url": "https://github.com/izniburak/php-router"
+            "type": "vcs",
+            "url": "https://github.com/Bytheway001/PHP-Router"
         }
     ]
 }
