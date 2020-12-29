@@ -1,24 +1,20 @@
 base_path: /
+resources:
+  - users
+  - payments
+  - providers
+  - bills
+  - salaries
+  - occupations
+  - employees
+  - reports
+  - sellers
+  - sells
+  - accounts
+  - roles
 routes:
   index: [/,App\Controllers\homeController.index,GET]
-  parse: ['/parse',App\Controllers\homeController.parse,GET]
-  partials: ['/partials/:name',App\Controllers\apiController.partial,GET]
-  builder: ['/builder',\Core\Builder.index,GET]
-  create_builder: ['/builder/create',\Core\Builder.create,POST]
-  create: ['/',create,'POST']
-  update: ['/:id',update,'POST']
-  new: ['/new',new,'GET']
-  products_index: ['/products',\App\Controllers\ProductsController.index,'GET']
-  edit: ['/edit/:id',edit,'GET']
-  delete: ['/destroy/:id',destroy,'GET']
-
-
-
-
-
-
-
-
-
-
-
+  delete_users: [/users,\App\Controllers\usersController.deleteAll,DELETE]
+  delete_employees: [/employees,\App\Controllers\employeesController.deleteAll,DELETE]
+  delete_bills: [/bills,\App\Controllers\billsController.deleteAll,DELETE]
+  delete_accounts: [/accounts, \App\Controllers\accountsController.deleteAll,DELETE]

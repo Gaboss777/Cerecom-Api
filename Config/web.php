@@ -1,10 +1,13 @@
 <?php 
+
+
 $database=[
 	'host'=>'localhost',
-	'user'=>'root',
+	'user'=>'app',
 	'password'=>'Silvereye1990',
-	'name'=>'delicias2',
+	'name'=>'cobranzacerecom',
 ]
+
 
 
 

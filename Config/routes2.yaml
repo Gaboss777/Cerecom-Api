@@ -1,0 +1,51 @@
+base_path: /
+resources:
+  - users
+  - payments
+  - providers
+  - bills
+  - salaries
+  - occupations
+  - employees
+routes:
+  index: [/,App\Controllers\homeController.index,GET]
+  #clients
+  list_users: [/users,\App\Controllers\usersController.list,GET]
+  create_user: [/users,\App\Controllers\usersController.create,POST]
+  update_user: [/users/:id,\App\Controllers\usersController.update,PUT]
+  delete_users: [/users,\App\Controllers\usersController.deleteAll,DELETE]
+  get_user: [/users/:id,\App\Controllers\usersController.getUserByID,GET]
+  #payments
+  create_payment: [/payments,\App\Controllers\paymentsController.create,POST]
+  #reports
+  payment_report: [/reports,\App\Controllers\reportsController.getAllPayments,GET]
+  #providers
+  create_provider: [/providers,\App\Controllers\providersController.create,POST]
+  list_providers: [/providers,\App\Controllers\providersController.index,GET]
+  delete_providers: [/providers/:id, \App\Controllers\providersController.show, DELETE]
+  #bills
+  create_bill: [/bills,\App\Controllers\billsController.create,POST]
+  list_bills: [/bills,\App\Controllers\billsController.index,GET]
+  list_bills_by_provider: [/providers/:provider_id/bills,\App\Controllers\billsController.getBillsofProvider,GET]
+  delete_bills: [/bills/:id,\App\Controllers\billController.show,DELETE]
+  #salaries
+  create_salary: [/salaries,\App\Controllers\salariesController.create,POST]
+  list_salaries: [/salaries,\App\Controllers\salariesController.index,GET]
+  get_salary: [/salaries/:id,\App\Controllers\salariesController.show,GET]
+  update_salary: [/salaries/:id,\App\Controllers\salariesController.show,PUT]
+  delete_salary: [/salaries/:id,\App\Controllers\salariesController.show,DELETE]
+  #occupations
+  create_occupation: [/occupations,\App\Controllers\occupationsController.create,POST]
+  list_occupations: [/occupations,\App\Controllers\occupationsController.index,GET]
+  get_occupation: [/occupations/:id,\App\Controllers\occupationsController.show,GET]
+  update_occupation: [/occupations/:id,\App\Controllers\occupationsController.show,PUT]
+  delete_occupation: [/occupations/:id,\App\Controllers\occupationsController.show,DELETE]
+  #employees
+
+
+
+
+
+
+
+
