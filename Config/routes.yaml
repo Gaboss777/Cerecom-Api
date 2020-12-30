@@ -18,3 +18,4 @@ routes:
   delete_employees: [/employees,\App\Controllers\employeesController.deleteAll,DELETE]
   delete_bills: [/bills,\App\Controllers\billsController.deleteAll,DELETE]
   delete_accounts: [/accounts, \App\Controllers\accountsController.deleteAll,DELETE]
+  user_login: [/login,\App\Controllers\accountsController.login,POST]
