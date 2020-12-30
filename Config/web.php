@@ -3,9 +3,9 @@
 
 $database=[
 	'host'=>'localhost',
-	'user'=>'root',
-	'password'=>'',
-	'name'=>'gaboapp',
+	'user'=>'app',
+	'password'=>'Silvereye1990',
+	'name'=>'cobranzacerecom',
 ]
 
 

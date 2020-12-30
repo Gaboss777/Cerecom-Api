@@ -8,7 +8,7 @@ class accountsController extends crudController{
 	public function deleteAll(){
 		foreach($this as $u){
 			$result=[];
-			$account=\App\Models\Account::find([$u]);
+			$account=Account::find([$u]);
 			if($account->delete()){
 				$result[]='x';
 				continue;
@@ -61,7 +61,7 @@ class accountsController extends crudController{
 
 	private function setAuthToken($user){
 		$secret_key = "YOUR_SECRET_KEY";
-		$issuer_claim = "agent.megabrokerslatam.co";
+		$issuer_claim = "cobranzas.inversionescerecom.com";
 		$audience_claim = "World";
 		$issuedat_claim = time();
 		$notbefore_claim = $issuedat_claim+0;
@@ -75,7 +75,7 @@ class accountsController extends crudController{
 			"data" => [
 				"id"=>$user->id,
 				"firstname" => $user->firstname,
-				"firstname" => $user->lastname,
+				"lastname" => $user->lastname,
 				"role"=>$user->role,
 			]
 		];
