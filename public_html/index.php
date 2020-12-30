@@ -22,13 +22,13 @@ ActiveRecord\Config::initialize(function($cfg)
 	'development' => 'mysql://'.$database['user'].':'.$database['password'].'@'.$database['host'].'/'.$database['name'].';charset=utf8'));
 });
 
-
-
 if(DEBUG==false){
 	try{
+		
 		$router->matchCurrentRequest();
 	}
 	catch(Exception $e){
+
 		die($e->getMessage());
 	}
 }
@@ -36,6 +36,7 @@ else{
 	$whoops = new \Whoops\Run;
 	$whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
 	$whoops->register();
+
 	$router->matchCurrentRequest();
 }
 
