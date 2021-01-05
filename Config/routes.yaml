@@ -11,12 +11,11 @@ resources:
   - sellers
   - sells
   - accounts
-  - roles
-  - logins
 routes:
   index: [/,App\Controllers\homeController.index,GET]
-  delete_users: [/users,\App\Controllers\usersController.deleteAll,DELETE]
-  delete_employees: [/employees,\App\Controllers\employeesController.deleteAll,DELETE]
-  delete_bills: [/bills,\App\Controllers\billsController.deleteAll,DELETE]
-  delete_accounts: [/accounts, \App\Controllers\accountsController.deleteAll,DELETE]
-  user_login: [/logins,\App\Controllers\accountsController.login,POST]
+  # delete_users: [/users,\App\Controllers\usersController.deleteAll,DELETE]
+  # delete_employees: [/employees,\App\Controllers\employeesController.deleteAll,DELETE]
+  # delete_bills: [/bills,\App\Controllers\billsController.deleteAll,DELETE]
+  # delete_accounts: [/accounts, \App\Controllers\accountsController.deleteAll,DELETE]
+  user_login: [/logins,\App\Controllers\loginsController.login,POST]
+  create_login: [/logins,\App\Controllers\loginsController.create,POST]

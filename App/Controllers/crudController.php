@@ -3,6 +3,7 @@
 * This is the main controller class, The controllers should inherit from this class (for custom views) or from \Core\Crud (for simple crud scaffolds)
 */
 namespace App\Controllers;
+use \Firebase\JWT\JWT;
 class crudController{
 	public function __construct(){
 		$this->payload = json_decode(file_get_contents("php://input"), TRUE);
@@ -73,14 +74,6 @@ class crudController{
 	// 	if($jwt){
 	// 		try{
 	// 			$decoded = JWT::decode($jwt, $secret_key, array('HS256'));
-	// 			$this->current_user=$decoded->data;
-	// 			$user=\App\Models\User::find([$this->current_user->id]);
-	// 			if($user->session_token !== $session){
-	// 				http_response_code(401);
-	// 				$this->response(['errors'=>true,'message'=>'Duplicated','reason'=>'Su cuenta inicio sesion en otro dispositivo']);
-	// 			}
-
-				
 	// 		}
 	// 		catch(\Exception $e){
 	// 			http_response_code(403);

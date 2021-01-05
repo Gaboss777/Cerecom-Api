@@ -7,7 +7,6 @@ class Controller{
 	public function __construct(){
 		$this->payload = json_decode(file_get_contents("php://input"), TRUE);
 		// $this->protect_route();
-		
 	}
 	protected function response(array $response){
 		header('Content-Type:application/json');
@@ -29,13 +28,6 @@ class Controller{
 	// 	if($jwt){
 	// 		try{
 	// 			$decoded = JWT::decode($jwt, $secret_key, array('HS256'));
-	// 			$this->current_user=$decoded->data;
-	// 			$user=\App\Models\User::find([$this->current_user->id]);
-	// 			if($user->session_token !== $session){
-	// 				http_response_code(401);
-	// 				$this->response(['errors'=>true,'message'=>'Duplicated','reason'=>'Su cuenta inicio sesion en otro dispositivo']);
-	// 			}
-
 	// 		}
 	// 		catch(\Exception $e){
 	// 			http_response_code(403);
@@ -48,7 +40,6 @@ class Controller{
 	// 	}
 	// }
 
-	
 }
 
 ?>

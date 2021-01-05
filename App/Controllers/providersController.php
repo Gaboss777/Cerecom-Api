@@ -1,8 +1,7 @@
 <?php 
 namespace App\Controllers;
 use \Core\View;
-class providersController extends Controller{
-	
+class providersController extends crudController{
 
 	public function create(){
 		$provider = new \App\Models\Provider($this->payload);

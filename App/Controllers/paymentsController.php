@@ -15,10 +15,6 @@ class paymentsController extends crudController{
 		}
 	}
 
-
-	public function list(){
-		
-	}
 }
 
 
