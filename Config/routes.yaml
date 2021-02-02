@@ -11,11 +11,44 @@ resources:
   - sellers
   - sells
   - accounts
+  - profiles
+  - mensualities
 routes:
   index: [/,App\Controllers\homeController.index,GET]
-  # delete_users: [/users,\App\Controllers\usersController.deleteAll,DELETE]
-  # delete_employees: [/employees,\App\Controllers\employeesController.deleteAll,DELETE]
-  # delete_bills: [/bills,\App\Controllers\billsController.deleteAll,DELETE]
-  # delete_accounts: [/accounts, \App\Controllers\accountsController.deleteAll,DELETE]
+  #clients
+  update_user: [/users/:id,\App\Controllers\usersController.update,PUT]
+  delete_users: [/users/:id,\App\Controllers\usersController.delete,DELETE]
+  #payments
+  update_payment: [/payments/:id,\App\Controllers\paymentsController.update,PUT]
+  delete_payments: [/payments/:id,\App\Controllers\paymentsController.delete,DELETE]
+  #providers
+  update_provider: [/providers/:id,\App\Controllers\providersController.update,PUT]
+  delete_providers: [/providers/:id,\App\Controllers\providersController.delete,DELETE]
+  #bills
+  update_bill: [/bills/:id,\App\Controllers\billsController.update,PUT]
+  delete_bills: [/bills/:id,\App\Controllers\billsController.delete,DELETE]
+  #employies
+  update_employee: [/employees/:id,\App\Controllers\employeesController.update,PUT]
+  delete_employees: [/employees/:id,\App\Controllers\employeesController.delete,DELETE]
+  #occupations
+  update_occupation: [/occupations/:id,\App\Controllers\occupationsController.update,PUT]
+  delete_occupations: [/occupations/:id,\App\Controllers\occupationsController.delete,DELETE]
+  #salaries
+  update_salarie: [/salaries/:id,\App\Controllers\salariesController.update,PUT]
+  delete_salaries: [/salaries/:id,\App\Controllers\salariesController.delete,DELETE]
+  #sellers
+  update_seller: [/sellers/:id,\App\Controllers\sellersController.update,PUT]
+  delete_sellers: [/sellers/:id,\App\Controllers\sellersController.delete,DELETE]
+  #sells
+  update_sell: [/sells/:id,\App\Controllers\sellsController.update,PUT]
+  delete_sells: [/sells/:id,\App\Controllers\sellsController.delete,DELETE]
+  #login
   user_login: [/logins,\App\Controllers\loginsController.login,POST]
-  create_login: [/logins,\App\Controllers\loginsController.create,POST]
+  #accounts
+  update_account: [/accounts/:id,\App\Controllers\accountsController.update,PUT]
+  delete_accounts: [/accounts/:id,\App\Controllers\accountsController.delete,DELETE]
+  #profiles
+  update_profile: [/profiles/:id,\App\Controllers\profilesController.update,PUT]
+  delete_profiles: [/profiles/:id,\App\Controllers\profilesController.delete,DELETE]
+  #mensuality
+  delete_mensualities: [/mensualities/:id,\App\Controllers\mensualitiesController.delete,DELETE]

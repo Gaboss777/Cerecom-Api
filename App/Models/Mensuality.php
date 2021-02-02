@@ -1,12 +1,10 @@
 <?php 
 namespace App\Models;
 
-class Occupation extends \ActiveRecord\Model{
+class Mensuality extends \ActiveRecord\Model{
 	public function serialize(){
 		return $this->to_array();
 	}
-
-
 }
 
 

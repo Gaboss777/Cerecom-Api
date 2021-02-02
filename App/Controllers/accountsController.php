@@ -18,6 +18,19 @@ class accountsController extends crudController{
 		}
 	}
 
+	public function update($id){
+		$account = Account::find([$id]);
+		$updateAccount = $this->payload;
+		$updateAccount['password'] = password_hash($updateAccount['password'],PASSWORD_DEFAULT);
+
+		if($account->update_attributes($updateAccount)){
+			$this->response(['errors'=>false,'data'=>$account->serialize()]);
+		} 
+		else{
+			$this->response(['errors'=>true,'data'=>"Error Desconocido"]);
+		}
+	}
+
 }
 
 

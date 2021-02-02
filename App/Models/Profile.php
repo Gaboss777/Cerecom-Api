@@ -1,7 +1,7 @@
 <?php 
 namespace App\Models;
 
-class Occupation extends \ActiveRecord\Model{
+class Profile extends \ActiveRecord\Model{
 	public function serialize(){
 		return $this->to_array();
 	}
